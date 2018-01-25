@@ -1,0 +1,60 @@
+// filter - functional programming - example to filter out grades.
+
+var grades = [89, 55, 77, 82];
+
+var newArray = grades.filter(function (number) {
+  if (number < 70) {
+    return number;
+  }
+});
+
+console.log(newArray);
+
+// reduce - functional programming - to get the average of grades.
+
+var grades = [89, 55, 77, 82];
+
+var newArray = grades.reduce(function (accumulator, number) {
+  return accumulator + number;
+}, 0);
+
+console.log(newArray);
+
+// forEach example to filter out grades.
+
+function passingGrades(number) {
+    
+    var grades = [89, 55, 77, 82];
+
+    var newGrades = [];
+
+    grades.forEach(function(element) {
+        
+       newGrades.push(element + 10) 
+
+    });
+    return newGrades;
+};
+
+passingGrades(10);
+
+// for loop example to filter out grades.
+
+var grades = [89, 55, 77, 82];
+
+function passingGrades(number) {
+
+  var newGrades = [];
+
+  for (var i = 0; i < number.length ; i++) {
+    if (number[i] > 69) {
+      console.log("Grade Passed "+number[i]);
+    
+      newGrades.push(number[i] + 10) 
+    }
+
+  };
+  return newGrades;
+};
+
+passingGrades(grades);;
